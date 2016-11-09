@@ -1,32 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tiara">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./meet.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <title>A Daily Cup of T</title>
   </head>
-  <body class='home-page'>
+  <!-- <body class='home-page'>
 
   <div class="body">
-    <div class="header">FITNESS - FOOD - ENLIGHTENMENT</div>
-    <div class="title">A Daily Cup of T</div>
-    <div class="subtitle">for the mind, body, and spirit</div>
-    <div class="button-wrapper">
-      <button class="get-started">GET STARTED</button>
+    <div class="body-background">
+      <p class="header">FITNESS - FOOD - ENLIGHTENMENT</p>
+      <p class="title">A Daily Cup of T</p>
+      <p class="subtitle">for the mind, body, and spirit</p>
+      <div class="button-wrapper">
+        <button class="get-started" ui-sref="meet">GET STARTED</button>
+      </div>
+      <div class="social-media">
+        <ul>
+          <li>FB</li>
+          <li>G+</li>
+          <li>IG</li>
+          <li>YT</li>
+        </ul>
+      </div>
     </div>
-    <div class="social-media">
+  </div> -->
+
+  <body class="meet">
+    <section class="menu-wrapper">
+      <div class="logo"><img src="./images/CupOfT.png"></div>
+
+      <div class="menu">
       <ul>
-        <li>FB</li>
-        <li>G+</li>
-        <li>IG</li>
-        <li>YT</li>
+        <li id="one">HOME</li>
+        <li id="one">MEET TIARA</li>
+        <li id="one">FITNESS & FOOD</li>
+        <li id="one">ENLIGHTENMENT</li>
+        <li id="one">SUSTAINABILITY</li>
+        <li id="one">CONTACT</li>
       </ul>
-    </div>
-  </div>
+      </div>
+
+      <div class="sub-menu">
+      <ul>
+        <li id="two">Workouts</li>
+        <li id="two">Recipes</li>
+        <li id="two">BLOG</li>
+      </ul>
+      </div>
+
+      <div class="social-media2">
+        <ul>
+          <li id="FB">FB</li>
+          <li id="G">G+</li>
+          <li id="IG">IG</li>
+          <li id="YT">YT</li>
+        </ul>
+      </div>
+
+    </section>
+    <section class="meet-wrapper">
+      <section class="main-content-wrapper">
+        <div class="tiara-photo"></div>
+        <p class="about">Words about Tiara</p>
+      </section>
+      <section class="stories"></section>
+    </section>
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+  <script src="./app.js"></script>
   </body>
 </html>
