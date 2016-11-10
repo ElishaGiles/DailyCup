@@ -12,6 +12,15 @@
   position: fixed;
   display: block;
   justify-content: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.logo img {
+  width: 65%;
+  margin-left: 35px;
+  margin-bottom: 35px;
+  margin-top: 10px;
 }
 
     .menu ul, li {
@@ -50,15 +59,16 @@
 
 .main-content-wrapper {
   margin-left: 18vw;
-  height: 100vh;
+  height: 110vh;
   width: 82vw;
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  color: #404142;
   display: flex;
 }
 
 .tiara-photo {
   width: 50%;
-  height: 100vh;
+  height: 110vh;
   background-image: url('./images/Tiara.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,15 +77,28 @@
 
 .about {
   width: 50%;
-  height: 100vh;
+  height: 110vh;
+  margin: 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Work Sans', sans-serif;
 }
 
-.stories {
-  margin-left: 18vw;
-  height: 150vh;
-  width: 82vw;
-  background-color: yellow;
-}
+  #title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  #intro {
+    text-align: center;
+    font-style: italic;
+  }
+
+  #signature {
+    text-align: right;
+  }
 
         @media (max-width: 1026px) {
           .menu-wrapper {
@@ -88,7 +111,7 @@
           }
           .logo img {
             width: 75%;
-            padding-left: 1em;
+            margin-left: 25px;
             margin-top: 20vh;
           }
           .menu {
@@ -107,3 +130,50 @@
             background-position: -125px 0;
           }
         }
+
+/* Styling for Story Section */
+
+.stories-intro {
+  margin-left: 18vw;
+  text-align: center;
+  padding: 1.5em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.story1-wrapper {
+  margin-left: 24vw;
+  height: 90vh;
+  width: 70vw;
+  color: #404142;
+  display: flex;
+  border: 1px solid #000;
+}
+
+.story1-photo {
+  width: 60%;
+  background-image: url('./images/katharine.jpg');
+  background-size: 340px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  margin-left: 2em;
+  margin-right: -20em;
+  margin-top: 1.5em;
+}
+
+.story1 {
+  width: 50%;
+  height: 110vh;
+  margin-left: 5em;
+  margin-top: 3em;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+}
+
+      @media (max-width: 1276px) {
+        .story1 {
+          font-size: 20px;
+          margin-left: 7em;
+        }
+      }
