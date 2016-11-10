@@ -3,13 +3,16 @@ angular.module('tiara', ['ui.router']).config(function($stateProvider, $urlRoute
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: "./index.html"
+      templateUrl: "./home.html"
     })
     .state('meet', {
       url: '/meet-tiara',
       templateUrl: "./meet.html"
     })
-
+    .state('mobile', {
+      url: '/mobile',
+      templateUrl: "./mobile.html"
+    })
 
 
 });
