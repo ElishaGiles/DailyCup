@@ -21,13 +21,17 @@ angular.module('tiara', ['ui.router']).config(function($stateProvider, $urlRoute
       url: '/menuSlide',
       templateUrl: "./menuSlide.html"
     })
-    .state('sustainability', {
-      url: "/sustainability",
-      templateUrl: "./sustainability.html"
+    .state('fitness', {
+      url: "/fitness",
+      templateUrl: "./fitness.html"
     })
     .state('enlightenment', {
       url: "/enlightenment",
       templateUrl: "./enlightenment.html"
+    })
+    .state('sustainability', {
+      url: "/sustainability",
+      templateUrl: "./sustainability.html"
     })
 
 });
