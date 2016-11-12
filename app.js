@@ -25,5 +25,9 @@ angular.module('tiara', ['ui.router']).config(function($stateProvider, $urlRoute
       url: "/sustainability",
       templateUrl: "./sustainability.html"
     })
+    .state('enlightenment', {
+      url: "/enlightenment",
+      templateUrl: "./enlightenment.html"
+    })
 
 });

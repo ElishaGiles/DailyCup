@@ -1,0 +1,43 @@
+.mobile-enlightenment-tiara-photo {
+  width: 100vw;
+  height: 45vh;
+  background-image: url('../images/enlightenTiara.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -76px;
+}
+
+.enlighten-content-wrapper {
+  width: 94%;
+  font-size: 23px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Work Sans', sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 1.5;
+  color: #777;
+}
+
+.intelligence-wrapper {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+
+.intelligence-photo {
+  height: 49vh;
+  width: 94%;
+  background-image: url("../images/intelligence.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#enlighten-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
