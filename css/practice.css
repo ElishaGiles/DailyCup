@@ -1,0 +1,42 @@
+#practice-header {
+  width: 100vw;
+  height: 10vh;
+  background-color: #ccc;
+}
+
+.practice-ham {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  float: right;
+  height: 10vh;
+}
+
+#practice-menu {
+  width: 40vw;
+  height: 100vh;
+  background-color: #ccc;
+  float: right;
+}
+
+.cancel {
+  float: right;
+  margin-right: 1em;
+  margin-top: 1em;
+  color: #fff;
+  font-size: 30px;
+}
+
+.practice-slide-wrapper {
+  width: 40vw;
+  height: 100vh;
+}
+
+.menu-list{
+  margin-top: 6em;
+  margin-left: 2em;
+  color: #fff;
+  line-height: 2.5em;
+  font-size: 20px;
+}

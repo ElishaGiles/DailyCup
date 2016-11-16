@@ -3,25 +3,26 @@
   width: 100vw;
   background-color: #f24b9b;
   color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .mobile-title {
   width: 70vw;
   height: 10vh;
-  float: left;
   font-size: 4.3em;
-  margin-left: 1em;
-  margin-top: .75em;
   font-family: 'Prociono', serif;
   letter-spacing: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-ham {
-  width: 20vw;
+  width: 11vw;
   height: 10vh;
-  float: right;
-  text-align: center;
-  margin-top: 1.5em;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-tiara-photo-wrapper {

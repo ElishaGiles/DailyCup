@@ -3,7 +3,7 @@ angular.module('tiara', ['ui.router']).config(function($stateProvider, $urlRoute
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: "./home.html"
+      templateUrl: "./views/home.html"
     })
     // .state('meet', {
     //   url: '/meet-tiara',
@@ -11,27 +11,27 @@ angular.module('tiara', ['ui.router']).config(function($stateProvider, $urlRoute
     // })
     .state('mobile', {
       url: '/mobile',
-      templateUrl: "./mobile.html"
+      templateUrl: "./views/mobile.html"
     })
     .state('menu', {
       url: '/meet-tiara',
-      templateUrl: "./mobile.html"
-    })
-    .state('menuSlide', {
-      url: '/menuSlide',
-      templateUrl: "./menuSlide.html"
+      templateUrl: "./views/mobile.html"
     })
     .state('fitness', {
       url: "/fitness",
-      templateUrl: "./fitness.html"
+      templateUrl: "./views/fitness.html"
     })
     .state('enlightenment', {
       url: "/enlightenment",
-      templateUrl: "./enlightenment.html"
+      templateUrl: "./views/enlightenment.html"
     })
     .state('sustainability', {
       url: "/sustainability",
-      templateUrl: "./sustainability.html"
+      templateUrl: "./views/sustainability.html"
+    })
+    .state('practice', {
+      url: "/practice",
+      templateUrl: "./views/practice-menu.html"
     })
 
 });
