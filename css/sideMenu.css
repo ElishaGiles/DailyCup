@@ -1,0 +1,42 @@
+.side-menu {
+  width: 75vw;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  float: right;
+  z-index: 6;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.cancel {
+  height: 10vh;
+  width: 90%;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#menu-items {
+  line-height: 1.5em;
+}
+
+#sub-menu-items {
+  line-height: 1.5em;
+}
+
+#side-menu-media {
+  width: 75vw;
+  height: 20vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    #side-menu-media-items {
+      display: inline-block;
+      margin-left: 0;
+    }

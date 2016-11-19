@@ -1,0 +1,133 @@
+.name-wrapper {
+  font-size: 25px;
+  height: 20vh;
+  display: flex;
+  margin: 2em;
+}
+
+.name {
+  width: 100%;
+  font-size: 30px;
+}
+
+#name-title {
+  font-size: 45px;
+}
+
+.name div {
+  width: 50%;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+}
+
+#firstname, #lastname {
+  border: solid 1px #000;
+  height: 9em;
+  padding: 12px;
+  width: 90%;
+}
+
+.names {
+  display: flex;
+}
+
+/*Email Section*/
+.email-wrapper {
+  font-size: 25px;
+  height: 15vh;
+  display: flex;
+  margin: 2em;
+}
+
+.email-title {
+  font-size: 45px;
+  width: 100%;
+}
+
+#email {
+  border: solid 1px #000;
+  height: 9em;
+  padding: 12px;
+  width: 90%;
+}
+
+/*Subject Section*/
+.subject-wrapper {
+  font-size: 25px;
+  height: 15vh;
+  display: flex;
+  margin: 2em;
+}
+
+.subject-title {
+  font-size: 45px;
+  width: 100%;
+}
+
+#subject {
+  border: solid 1px #000;
+  height: 9em;
+  padding: 12px;
+  width: 90%;
+}
+
+/*Message Section*/
+.message-wrapper {
+  font-size: 25px;
+  height: 29vh;
+  display: flex;
+  margin: 2em;
+}
+
+.message-title {
+  font-size: 45px;
+  width: 100%;
+}
+
+#message {
+  border: solid 1px #000;
+  height: 31em;
+  padding: 12px;
+  width: 90%;
+}
+
+/*How did you find me*/
+.question-wrapper {
+  font-size: 25px;
+  height: 15vh;
+  display: flex;
+  margin: 2em;
+}
+
+.question-title {
+  font-size: 45px;
+  width: 100%;
+}
+
+#question {
+  border: solid 1px #000;
+  height: 9em;
+  padding: 12px;
+  width: 90%;
+}
+
+/*Button*/
+.button-wrapper {
+  height: 11vh;
+  margin: 3em;
+  width: 93vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit {
+  width: 50%;
+  height: 3em;
+  border: solid 1px #000;
+  font-size: 48px;
+  background-color: #000;
+  color: #fff;
+}
