@@ -5,10 +5,6 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
       url: '/',
       templateUrl: "./views/home.html"
     })
-    // .state('meet', {
-    //   url: '/meet-tiara',
-    //   templateUrl: "./meet.html"
-    // })
     .state('mobile', {
       url: '/mobile',
       templateUrl: "./views/mobile.html",
@@ -16,19 +12,24 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     })
     .state('menu', {
       url: '/meet-tiara',
-      templateUrl: "./views/mobile.html"
+      templateUrl: "./views/mobile.html",
+      controller: "mobileController"
+
     })
     .state('fitness', {
       url: "/fitness",
-      templateUrl: "./views/fitness.html"
+      templateUrl: "./views/fitness.html",
+      controller: "mobileController"
     })
     .state('enlightenment', {
       url: "/enlightenment",
-      templateUrl: "./views/enlightenment.html"
+      templateUrl: "./views/enlightenment.html",
+      controller: "mobileController"
     })
     .state('sustainability', {
       url: "/sustainability",
-      templateUrl: "./views/sustainability.html"
+      templateUrl: "./views/sustainability.html",
+      controller: "mobileController"
     })
     .state('contact', {
       url: "/contact",

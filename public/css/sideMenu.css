@@ -1,7 +1,7 @@
 .menu-wrapper {
   width: 75vw;
   height: 100vh;
-  background-color: #000;
+  background-color: #f24b9b;
   color: #fff;
   float: left;
   z-index: 6;
@@ -45,8 +45,8 @@
 }
 
     #side-menu-media-items {
-      display: inline-block;
-      margin-left: 0;
+      display: flex;
+      margin-left: -1.5em;
     }
 
 .menuIsOpen-add {

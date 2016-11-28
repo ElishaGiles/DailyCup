@@ -11,13 +11,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 app.post('/contact', function(req, res, next) {
-  if(!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.subject || !req.body.message) {
-    return res.send('missing information');
-  }
-  var email_check = validator.validate(req.body.mail);
-  if(email_check == false) {
-    return res.send('invalid email');
-  }
+  // if(!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.subject || !req.body.message) {
+  //   return res.send('missing information');
+  // }
+  // var email_check = validator.validate(req.body.mail);
+  // if(email_check == false) {
+  //   return res.send('invalid email');
+  // }
   var mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     service: 'Gmail',
