@@ -1,34 +1,38 @@
+.contact-wrapper {
+  margin-left: 18vw;
+  height: 100vh;
+  width: 82vw;
+  background: #ccc;
+}
+
 .name-wrapper {
-  font-size: 25px;
-  height: 20vh;
+  font-size: 15px;
   display: flex;
-  margin: 2em;
+  padding: 2em;
 }
 
 .name {
   width: 100%;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 #name-title {
-  font-size: 45px;
+  font-size: 16px;
 }
 
 .name div {
-  width: 50%;
+  width: 31%;
 }
 
 .input {
   display: flex;
-  justify-content: space-between;
 }
 
 #firstname, #lastname {
   border: solid 1px #000;
-  /*height: 9em;*/
-  padding: 27px;
-  width: 85%;
-  font-size: 51px;
+  font-size: 17px;
+  padding: 17px;
+  width: 20em;
 }
 
 .names {
@@ -37,102 +41,97 @@
 
 /*Email Section*/
 .email-wrapper {
-  font-size: 25px;
-  height: 15vh;
+  font-size: 15px;
   display: flex;
-  margin: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
 .email-title {
-  font-size: 45px;
+  font-size: 16px;
   width: 100%;
 }
 
 #email {
   border: solid 1px #000;
-  /*height: 9em;*/
-  padding: 27px;
-  width: 92%;
-  font-size: 51px;
+  width: 58%;
+  font-size: 17px;
+  padding: 17px;
 }
 
 /*Subject Section*/
 .subject-wrapper {
-  font-size: 25px;
-  height: 15vh;
+  font-size: 15px;
   display: flex;
-  margin: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
 .subject-title {
-  font-size: 45px;
+  font-size: 16px;
   width: 100%;
 }
 
 #subject {
   border: solid 1px #000;
-  /*height: 9em;*/
-  padding: 27px;
-  width: 92%;
-  font-size: 51px;
+  width: 58%;
+  font-size: 17px;
+  padding: 17px;
 }
 
 /*Message Section*/
 .message-wrapper {
-  font-size: 25px;
-  height: 29vh;
+  font-size: 15px;
   display: flex;
-  margin: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
 .message-title {
-  font-size: 45px;
+  font-size: 16px;
   width: 100%;
 }
 
 textarea {
   border: solid 1px #000;
-  font-size: 38px;
-  width: 83vw;
-  height: 20vh;
-  padding: 27px;
+  font-size: 17px;
+  width: 58%;
+  height: 15vh;
+  padding: 17px;
 }
 
 /*How did you find me*/
 .question-wrapper {
-  font-size: 25px;
-  height: 15vh;
+  font-size: 15px;
   display: flex;
-  margin: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
 .question-title {
-  font-size: 45px;
+  font-size: 16px;
   width: 100%;
 }
 
 #question {
   border: solid 1px #000;
-  /*height: 9em;*/
-  padding: 27px;
-  width: 92%;
-  font-size: 51px;
+  padding: 17px;
+  width: 58%;
+  font-size: 17px;
 }
 
 /*Button*/
-.button-wrapper {
-  height: 11vh;
-  margin: 3em;
-  width: 93vw;
-  display: flex;
-  justify-content: space-between;
+#button-wrapper {
+  font-size: 15px;
+  padding-left: 2em;
+  padding-bottom: 2em;
 }
 
-.submit {
-  width: 50%;
-  height: 3em;
+#submit {
   border: solid 1px #000;
-  font-size: 48px;
+  font-size: 15px;
   background-color: #000;
   color: #fff;
+  height: 32px;
+  width: 6em;
 }

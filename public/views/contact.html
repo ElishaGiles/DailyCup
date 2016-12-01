@@ -1,22 +1,18 @@
-<div ng-class="{menuIsOpen: menuOpen}" class="main-content-wrapper-michael">
+<side-menu-directive></side-menu-directive>
 
-  <section class="mobile-header-wrapper">
-    <div class="mobile-title" ui-sref="mobile">A DAILY CUP OF T</div>
-    <div ng-click="toggleMenu()" class="mobile-ham"><img src="./images/ham.png"></div>
+<section class="contact-wrapper">
+  <section class="name-wrapper">
+    <div class="name" id="name-title">NAME * <br><br>
+      <form class="input">
+        <div><input type="text" name="firstname" id="firstname" ng-model="form.firstname"></div>
+        <div><input type="text" name="lastname" id="lastname" ng-model="form.lastname"></div>
+      </form>
+        <section class="names">
+             <div><br>First Name</div>
+             <div><br>Last Name</div>
+        </section>
+    </div>
   </section>
-
-<section class="name-wrapper">
-  <div class="name" id="name-title">NAME * <br><br>
-    <form class="input">
-      <div><input type="text" name="firstname" id="firstname" ng-model="form.firstname"></div>
-      <div><input type="text" name="lastname" id="lastname" ng-model="form.lastname"></div>
-    </form>
-      <section class="names">
-           <div><br>First Name</div>
-           <div><br>Last Name</div>
-      </section>
-  </div>
-</section>
 
 <section class="email-wrapper">
   <div class="email-title">EMAIL * <br><br>
@@ -50,9 +46,8 @@
   </div>
 </section>
 
-<section class="button-wrapper">
-  <button class="submit" type="button" ng-click="sendForm(form)">Submit</button>
+<section id="button-wrapper">
+  <button id="submit" type="button" ng-click="sendForm(form)">Submit</button>
 </section>
 </div>
-
-<top-menu-directive class="menu-wrapper" ng-class="{menuIsOpenMenu: menuOpen}"></top-menu-directive>
+</section>
