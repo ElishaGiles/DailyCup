@@ -1,6 +1,6 @@
 .contact-wrapper {
   margin-left: 18vw;
-  height: 100vh;
+  height: 137vh;
   width: 82vw;
   background: #ccc;
 }
@@ -8,7 +8,9 @@
 .name-wrapper {
   font-size: 15px;
   display: flex;
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
 }
 
 .name {
@@ -21,7 +23,7 @@
 }
 
 .name div {
-  width: 31%;
+  width: 32%;
 }
 
 .input {
@@ -32,7 +34,7 @@
   border: solid 1px #000;
   font-size: 17px;
   padding: 17px;
-  width: 20em;
+  width: 16.5em;
 }
 
 .names {

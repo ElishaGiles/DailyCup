@@ -1,84 +1,64 @@
-.menu-wrapper {
-  width: 75vw;
+.meet {
+  height: 250vh;
+  width: 100vw;
+  display: flex;
+}
+
+.menu2-wrapper {
   height: 100vh;
+  width: 18vw;
   background-color: #f24b9b;
-  color: #fff;
-  float: left;
-  z-index: 6;
-  font-size: 4em;
-  right: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
+  color: white;
   position: fixed;
-  transform: translate(100%);
-}
-
-.main-content-wrapper-michael {
-  float: left;
-}
-
-.cancel {
-  height: 10vh;
-  width: 90%;
-  color: #fff;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-#menu-items {
-  line-height: 1.5em;
-}
-
-#sub-menu-items {
-  line-height: 1.5em;
-}
-
-#side-menu-media {
-  width: 75vw;
-  height: 20vh;
-  color: #fff;
-  display: flex;
+  display: block;
   justify-content: center;
-  align-items: center;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-    #side-menu-media-items {
-      display: flex;
-      margin-left: -1.5em;
+.logo img {
+  width: 65%;
+  margin-left: 35px;
+  margin-bottom: 35px;
+  /*margin-top: 6em;*/
+  cursor: pointer;
+}
+
+    .menu2 ul, li {
+      margin-left: 1.5em;
     }
 
-.menuIsOpen-add {
-  transition: transform .3s linear;
+    #one {
+      padding-bottom: 1em;
+      cursor: pointer;
+    }
+
+.sub-menu2 {
+  padding-top: 1em;
+  padding-left: 1.5em;
+  line-height: 1.5em;
 }
 
-.menuIsOpen,
-.menuIsOpen-add-active {
-  transform: translateX(-30%);
+    .sub-menu ul, li {
+      margin-left: 1.5em;
+    }
+
+    #workout, #recipe, #blog {
+      color: #000;
+      padding-bottom: .5em;
+      cursor: pointer;
+    }
+
+.social-media2 {
+  margin-left: 4em;
+  margin-top: 2em;
 }
 
-.menuIsOpen-remove {
-  transition: transform .3s linear;
-}
+    .social-media2 ul li {
+      display: inline-block;
+    }
 
-.menuIsOpen-remove-active {
-  transform: translateX(0);
-}
-
-.menuIsOpenMenu-add {
-  transition: transform .3s linear;
-}
-
-.menuIsOpenMenu,
-.menuIsOpenMenu-add-active {
-  transform: translateX(0);
-}
-
-.menuIsOpenMenu-remove {
-  transition: transform .3s linear;
-}
-
-.menuIsOpenMenu-remove-active {
-  transform: translateX(100%);
-}
+    #FB, #G, #IG, #YT {
+      margin-left: 0;
+      cursor: pointer;
+    }
