@@ -69,7 +69,7 @@
 .tiara-photo {
   width: 50%;
   height: 110vh;
-  background-image: url('./images/Tiara.jpg');
+  background-image: url('../images/Tiara.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -100px;

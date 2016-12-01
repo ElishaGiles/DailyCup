@@ -5,9 +5,9 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
       url: '/',
       templateUrl: "./views/home.html"
     })
-    .state('mobile', {
-      url: '/mobile',
-      templateUrl: "./views/mobile.html",
+    .state('meet-tiara', {
+      url: '/meet-tiara',
+      templateUrl: "./views/meet.html",
       controller: "mobileController"
     })
     .state('menu', {

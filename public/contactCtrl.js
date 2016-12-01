@@ -6,7 +6,7 @@ angular.module('tiara').controller('contact-ctrl', function($scope, contactServi
         alert('There was an error');
       }
       else {
-        alert('Great');
+        alert('Your Message was Sent');
       }
 
     })
