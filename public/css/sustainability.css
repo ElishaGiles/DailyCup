@@ -1,7 +1,7 @@
 .content-wrapper {
   margin-left: 18vw;
   width: 60vw;
-  height: 165vh;
+  height: 135vh;
   /*background: grey;*/
   display: flex;
   justify-content: center;
@@ -27,31 +27,9 @@
   margin-left: 43vw;
   height: 117vh;
   width: 26vw;
-  background-image: url('../images/fitnessTiara.jpg');
+  background-image: url('../images/sustain.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -85px -39px;
+  background-position: -115px -39px;
   position: fixed;
-}
-
-.sustainability-picture2 {
-  height: 300px;
-  width: 300px;
-  background-image: url('../images/braver.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  float: right;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.sustainability-picture {
-  height: 300px;
-  width: 300px;
-  background-image: url('../images/fitness.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  float: left;
-  margin-right: 1em;
-  margin-bottom: 1em;
 }

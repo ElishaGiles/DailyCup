@@ -1,0 +1,57 @@
+.content-wrapper {
+  margin-left: 18vw;
+  width: 60vw;
+  height: 165vh;
+  /*background: grey;*/
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  line-height: 150%;
+}
+
+.block {
+  display: block;
+  width: 55vw;
+  height: 90vh;
+}
+
+.fitness-title {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  font-weight: bolder;
+}
+
+.tiara-photo-wrapper-fitness {
+  margin-top: -16px;
+  margin-left: 43vw;
+  height: 117vh;
+  width: 26vw;
+  background-image: url('../images/fitnessTiara.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -85px -39px;
+  position: fixed;
+}
+
+.fitness-picture2 {
+  height: 300px;
+  width: 300px;
+  background-image: url('../images/braver.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: right;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.fitness-picture {
+  height: 300px;
+  width: 300px;
+  background-image: url('../images/fitness.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
