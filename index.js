@@ -70,6 +70,15 @@ app.post('/login',
     res.redirect('/users/' + req.user.username);
   });
 
+//Registering
+app.post('/API/register',
+  function(req, res) {
+    console.log(req.body);
+    db.create_user([req.body.username, req.body.password], function(err, response) {
+    })
+  }
+)
+
 //Other
 app.use(express.static('./public'));
 

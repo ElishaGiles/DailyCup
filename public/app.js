@@ -45,7 +45,8 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     })
     .state('register', {
       url: "/register",
-      templateUrl: "../views/register.html"
+      templateUrl: "../views/register.html",
+      controller: "loginCtrl"
     })
     .state('blog', {
       url: "/blog",
