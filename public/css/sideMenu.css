@@ -36,14 +36,14 @@
 .sub-menu2 {
   padding-top: 1em;
   padding-left: 1.5em;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
     .sub-menu ul, li {
       margin-left: 1.5em;
     }
 
-    #workout, #recipe, #blog {
+    #workout, #recipe, #blog, #shouldI {
       color: #000;
       padding-bottom: .5em;
       cursor: pointer;

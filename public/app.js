@@ -30,5 +30,10 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
       templateUrl: "../views/contact.html",
       controller: 'contact-ctrl'
     })
+    .state('shouldI', {
+      url: "/shouldIWorkout",
+      templateUrl: "../views/shouldI.html",
+      controller: "currentWeatherCtrl"
+    })
 
 });
