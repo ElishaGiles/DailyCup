@@ -1,0 +1,71 @@
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: #ccc;
+}
+
+.register-user {
+  height: 10vh;
+  float: right;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 2em;
+}
+
+.register-user:hover {
+  color: white;
+}
+
+.login-title {
+  height: 20vh;
+  width: 100vw;
+  font-size: 45px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-wrapper {
+  height: 29vh;
+  width: 100vw;
+  /*border: solid 1px black;*/
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+input {
+  height: 30px;
+  width: 25em;
+  padding: 17px;
+  font-size: 17px;
+}
+
+.login-submit-button {
+  width: 100vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.cancel-login {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cancel-login:hover {
+  color: white;
+}
