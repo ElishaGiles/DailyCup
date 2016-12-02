@@ -4,20 +4,18 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var nodemailer = require('nodemailer');
 var validator = require('email-validator');
+var passport = require('passport');
+
 
 var app = express();
+var LocalStrategy = require('passport-local').Strategy;
+
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
+//Sending Email
 app.post('/contact', function(req, res, next) {
-  // if(!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.subject || !req.body.message) {
-  //   return res.send('missing information');
-  // }
-  // var email_check = validator.validate(req.body.mail);
-  // if(email_check == false) {
-  //   return res.send('invalid email');
-  // }
   var mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     service: 'Gmail',
@@ -46,6 +44,16 @@ app.post('/contact', function(req, res, next) {
   });
 })
 
+//Authentication Process
+app.post('/login',
+  passport.authenticate('local'),
+  function(req, res) {
+    // If this function gets called, authentication was successful.
+    // `req.user` contains the authenticated user.
+    res.redirect('/users/' + req.user.username);
+  });
+
+//Other
 app.use(express.static('./public'));
 
 app.listen(8080, function() {
