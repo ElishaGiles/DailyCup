@@ -41,37 +41,6 @@
     text-align: right;
   }
 
-        @media (max-width: 1026px) {
-          .menu-wrapper {
-            height: 100vh;
-            width: 18vw;
-            background-color: #f24b9b;
-            color: white;
-            position: fixed;
-            display: block;
-          }
-          .logo img {
-            width: 75%;
-            margin-left: 25px;
-            margin-top: 20vh;
-          }
-          .menu {
-            margin-top: 40px;
-          }
-          .menu ul {
-            margin-left: 0;
-          }
-          .sub-menu ul {
-            margin-left: 0;
-          }
-          .social-media2 {
-            margin-left: 2em;
-          }
-          .tiara-photo {
-            background-position: -125px 0;
-          }
-        }
-
 /* Styling for Story Section */
 
 .stories-intro {
@@ -92,7 +61,7 @@
 
 .story1-photo {
   width: 60%;
-  background-image: url('./images/katharine.jpg');
+  background-image: url('../images/katharine.jpg');
   background-size: 340px;
   background-repeat: no-repeat;
   display: flex;

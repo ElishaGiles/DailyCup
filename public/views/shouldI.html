@@ -1,3 +1,10 @@
 <!-- <side-menu-directive></side-menu-directive> -->
 
-{{ weatherTemp }}
+<div> Current Temperature: {{ weatherTemp }} </div>
+<div> Current Humidity: {{ weatherHum }} </div>
+<div> Current Pressure: {{ weatherPressure }} </div>
+<div> Current Wind Speed: {{ weatherWindSpeed }} <div>
+
+<button type="button" ng-click="getCurrentWeather()">Get Weather</button>
+
+<button type="button" ui-sref="meet-tiara">Back</button>

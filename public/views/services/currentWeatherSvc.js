@@ -1,9 +1,12 @@
 angular.module('tiara').service('currentWeatherSvc', function($http) {
 
 this.getCurrentWeather = function() {
+  return $http({
   method: 'GET',
-  url: 'api.openweathermap.org/data/2.5/weather?q=provo&APPID=b43bd17f3624f267832c89ee3b9d3667'
-}.then(function(response) {
+  url: 'http://api.openweathermap.org/data/2.5/weather?q=provo&APPID=b43bd17f3624f267832c89ee3b9d3667'
+}).then(function(response) {
+  console.log(response);
+
             var weatherObject = {};
             if (response.status === 200) {
                 weatherObject.temp = response.data.main.temp;
@@ -16,7 +19,7 @@ this.getCurrentWeather = function() {
             }
             return "It's broken, sorry!";
         });
-})
 
 
+}
 })

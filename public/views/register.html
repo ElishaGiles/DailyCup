@@ -1,0 +1,24 @@
+<!-- using the Login css -->
+
+<section class="login-wrapper">
+
+  <div class="register-user" ui-sref="register"></div>
+
+  <div class="login-title">Please Regsiter</div>
+
+  <section class="input-wrapper">
+    <div class="inputs">
+      <input type="text" name="username" placeholder="username" ng-model="r_username">
+    </div>
+    <div class="inputs">
+      <input type="text" name="password" placeholder="password" ng-model="r_password">
+    </div>
+  </section>
+
+  <div class="login-submit-button">
+    <button type="button" ng-click="register()" ui-sref="meet-tiara">Submit</button>
+  </div>
+
+  <div class="cancel-login" ui-sref="home">Cancel</div>
+
+</section>

@@ -5,14 +5,16 @@ var cors = require('cors');
 var nodemailer = require('nodemailer');
 var validator = require('email-validator');
 var passport = require('passport');
+var massive = require('massive');
 
 
 var app = express();
 var LocalStrategy = require('passport-local').Strategy;
-
+var db = massive.connectSync({db : "TeaDB"});
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
+app.use(passport.initialize());
 
 //Sending Email
 app.post('/contact', function(req, res, next) {
@@ -45,6 +47,21 @@ app.post('/contact', function(req, res, next) {
 })
 
 //Authentication Process
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function (err, user) {
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if (!user.validPassword(password)) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      return done(null, user);
+    });
+  }
+));
+
 app.post('/login',
   passport.authenticate('local'),
   function(req, res) {

@@ -33,6 +33,10 @@
       cursor: pointer;
     }
 
+    #one:hover {
+      color: black;
+    }
+
 .sub-menu2 {
   padding-top: 1em;
   padding-left: 1.5em;
@@ -47,6 +51,10 @@
       color: #000;
       padding-bottom: .5em;
       cursor: pointer;
+    }
+
+    #workout:hover, #recipe:hover, #blog:hover, #shouldI:hover {
+      color: white;
     }
 
 .social-media2 {
