@@ -3,54 +3,54 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: "../views/home.html"
+      templateUrl: "../views/html/home.html"
     })
     .state('meet-tiara', {
       url: '/meet-tiara',
-      templateUrl: "../views/meet.html"
+      templateUrl: "../views/html/meet.html"
     })
     .state('menu', {
       url: '/meet-tiara',
-      templateUrl: "../views/mobile.html"
+      templateUrl: "../views/html/mobile.html"
     })
     .state('fitness', {
       url: "/fitness",
-      templateUrl: "../views/fitness.html"
+      templateUrl: "../views/html/fitness.html"
     })
     .state('enlightenment', {
       url: "/enlightenment",
-      templateUrl: "../views/enlightenment.html"
+      templateUrl: "../views/html/enlightenment.html"
     })
     .state('sustainability', {
       url: "/sustainability",
-      templateUrl: "../views/sustainability.html"
+      templateUrl: "../views/html/sustainability.html"
     })
     .state('contact', {
       url: "/contact",
-      templateUrl: "../views/contact.html",
+      templateUrl: "../views/html/contact.html",
       controller: 'contact-ctrl'
     })
     .state('shouldI', {
       url: "/shouldIWorkout",
-      templateUrl: "../views/shouldI.html",
+      templateUrl: "../views/html/shouldI.html",
       controller: "currentWeatherCtrl"
     })
     .state('login', {
       url: "/login",
-      templateUrl: "../views/login.html"
+      templateUrl: "../views/html/login.html"
     })
     .state('recipes', {
       url: "/recipes",
-      templateUrl: "../views/recipes.html"
+      templateUrl: "../views/html/recipes.html"
     })
     .state('register', {
       url: "/register",
-      templateUrl: "../views/register.html",
+      templateUrl: "../views/html/register.html",
       controller: "loginCtrl"
     })
     .state('blog', {
       url: "/blog",
-      templateUrl: "../views/blog.html"
+      templateUrl: "../views/html/blog.html"
     })
 
 });

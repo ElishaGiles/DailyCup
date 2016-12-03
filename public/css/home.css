@@ -100,11 +100,11 @@
 
 .social-media {
   width: 100vw;
-  height: 8vh;
+  height: 13vh;
   color: #fff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
 }
 
     .social-media ul li {
@@ -113,7 +113,16 @@
       cursor: pointer;
     }
 
-h6 {
+    a {
+      color: white;
+    }
+
+    a:hover {
+      color: black;
+      text-decoration: underline;
+    }
+
+.login-button-wrapper {
   display: flex;
   justify-content: center;
   color: white;
@@ -121,6 +130,7 @@ h6 {
   cursor: pointer;
 }
 
-h6:hover {
+#login-button:hover {
   color: black;
+  text-decoration: underline;
 }

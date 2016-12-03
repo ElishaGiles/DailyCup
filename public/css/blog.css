@@ -1,4 +1,4 @@
-.enlighten-content-wrapper {
+.blog-content-wrapper {
   margin-left: 18vw;
   width: 60vw;
   height: 105vh;
@@ -15,14 +15,14 @@
   color: #grey;
 }
 
-.enlightenment-title {
+.blog-title {
   display: flex;
   justify-content: center;
   padding: 2em;
   font-weight: bolder;
 }
 
-.tiara-photo-wrapper-enlighten {
+.tiara-photo-wrapper-blog {
   margin-top: -16px;
   margin-left: 43vw;
   height: 117vh;

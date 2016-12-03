@@ -1,8 +1,20 @@
 .contact-wrapper {
   margin-left: 18vw;
-  height: 137vh;
+  height: 125vh;
   width: 82vw;
   background: #ccc;
+}
+
+.tiara-photo-wrapper-contact {
+  margin-top: -16px;
+  margin-left: 60vw;
+  height: 117vh;
+  width: 26vw;
+  background-image: url('../images/contactTiara.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -85px -30px;
+  position: fixed;
 }
 
 .name-wrapper {
@@ -35,6 +47,7 @@
   font-size: 17px;
   padding: 17px;
   width: 16.5em;
+  height: 0em;
 }
 
 .names {
@@ -59,6 +72,7 @@
   width: 58%;
   font-size: 17px;
   padding: 17px;
+  height: 0em;
 }
 
 /*Subject Section*/
@@ -79,6 +93,7 @@
   width: 58%;
   font-size: 17px;
   padding: 17px;
+  height: 0em;
 }
 
 /*Message Section*/
@@ -120,6 +135,7 @@ textarea {
   padding: 17px;
   width: 58%;
   font-size: 17px;
+  height: 0em;
 }
 
 /*Button*/

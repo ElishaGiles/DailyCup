@@ -9,7 +9,7 @@ this.getCurrentWeather = function() {
 
             var weatherObject = {};
             if (response.status === 200) {
-                weatherObject.temp = response.data.main.temp;
+                weatherObject.temp = Math.round(response.data.main.temp * (9/5) - 459.67);
                 weatherObject.icon = response.data.weather[0].icon;
                 weatherObject.desc = response.data.weather[0].description;
                 weatherObject.hum = response.data.main.humidity;
