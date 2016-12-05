@@ -12,8 +12,4 @@ angular.module('tiara').controller('contact-ctrl', function($scope, contactServi
     })
   }
 
-  $scope.toggleMenu = function() {
-    $scope.menuOpen = !$scope.menuOpen;
-  }
-
 })

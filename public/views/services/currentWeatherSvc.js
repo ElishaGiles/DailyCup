@@ -1,9 +1,9 @@
 angular.module('tiara').service('currentWeatherSvc', function($http) {
 
-this.getCurrentWeather = function() {
+this.getCurrentWeather = function(zip) {
   return $http({
   method: 'GET',
-  url: 'http://api.openweathermap.org/data/2.5/weather?q=provo&APPID=b43bd17f3624f267832c89ee3b9d3667'
+  url: 'http://api.openweathermap.org/data/2.5/weather?q=' + zip + '&APPID=b43bd17f3624f267832c89ee3b9d3667'
 }).then(function(response) {
   console.log(response);
 

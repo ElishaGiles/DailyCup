@@ -1,10 +1,19 @@
 <side-menu-directive></side-menu-directive>
 
 <section class="current-weather">
-<div> Current Temperature: {{ weatherTemp }} </div>
-<div> Current Humidity: {{ weatherHum }} </div>
-<div> Current Wind Speed: {{ weatherWindSpeed }} <div>
+  <div class="weather-title">Should You Workout?</div>
+  <div class="location-wrapper">
+    <div>What is your zip code?</div>
+    <input type="text" class="location" ng-model="location">
+  </div>
+  <section class="weather-info">
+    <ul>
+      <li> Current Temperature: {{ weatherTemp }} {{ degrees}} </li><br>
+      <li> Current Humidity: {{ weatherHum }}{{ percent }}</li><br>
+      <li> Current Wind Speed: {{ weatherWindSpeed }}{{ speed }}<li>
+    </ul>
+</section>
 
-<button type="button" ng-click="getCurrentWeather()">Get Weather</button>
+<button type="button" ng-click="getCurrentWeather(location)">Get Weather</button>
 
 </section>

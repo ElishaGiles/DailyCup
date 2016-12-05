@@ -1,4 +1,42 @@
 .current-weather {
-  margin-left: 25vw;
-  padding-top: 10vh;
+  margin-left: 18vw;
+  height: 100vh;
+  background-image: url('../images/clouds.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.weather-title {
+  width: 81vw;
+  height: 20vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+.location-wrapper {
+  width: 81vw;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location {
+  height: 15px;
+  width: 8em;
+  padding: 5px;
+  font-size: 17px;
+  margin-left: 1em;
+}
+
+.weather-info {
+  border: 1px solid black;
+  height: 20vh;
+  width: 81vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
