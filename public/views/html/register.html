@@ -1,6 +1,7 @@
 <!-- using the Login css -->
 
 <section class="login-wrapper">
+  <div class="body-background">
 
   <div class="register-user" ui-sref="register"></div>
 
@@ -8,10 +9,13 @@
 
   <section class="input-wrapper">
     <div class="inputs">
-      <input type="text" name="username" placeholder="username" ng-model="registerInfo.username">
+      <input type="text" name="username" placeholder="Username" ng-model="registerInfo.username">
     </div>
     <div class="inputs">
-      <input type="password" name="password" placeholder="password" ng-model="registerInfo.password">
+      <input type="password" name="password" placeholder="Password" ng-model="registerInfo.password">
+    </div>
+    <div class="inputs">
+      <input type="password" name="securityKey" placeholder="Security Key" ng-model="registerInfo.securityKey">
     </div>
   </section>
 
@@ -21,4 +25,5 @@
 
   <div class="cancel-login" ui-sref="home">Cancel</div>
 
+</div>
 </section>

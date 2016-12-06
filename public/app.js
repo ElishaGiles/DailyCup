@@ -37,7 +37,8 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     })
     .state('login', {
       url: "/login",
-      templateUrl: "../views/html/login.html"
+      templateUrl: "../views/html/login.html",
+      controller: "loginCtrl"
     })
     .state('recipes', {
       url: "/recipes",
@@ -46,7 +47,7 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     .state('register', {
       url: "/register",
       templateUrl: "../views/html/register.html",
-      controller: "loginCtrl"
+      controller: "registerCtrl"
     })
     .state('blog', {
       url: "/blog",
@@ -54,7 +55,8 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     })
     .state('a-blog', {
       url: "/blog/1234",
-      templateUrl: "../views/admin/a-blog.html"
+      templateUrl: "../views/admin/a-blog.html",
+      controller: "blog-ctrl"
     })
 
 });

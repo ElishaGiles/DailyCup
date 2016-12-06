@@ -1,2 +1,5 @@
 SELECT * FROM user_info
-WHERE username = $1;
+WHERE "Username" = $1
+AND "Password" = $2;
+
+-- user_info.Username

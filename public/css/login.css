@@ -1,7 +1,10 @@
 .login-wrapper {
   height: 100vh;
   width: 100vw;
-  background: #ccc;
+  background-image: url("../images/dream-cup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .register-user {
@@ -17,38 +20,40 @@
 }
 
 .login-title {
-  height: 20vh;
+  height: 13vh;
   width: 100vw;
   font-size: 45px;
-  color: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .input-wrapper {
   height: 29vh;
   width: 100vw;
-  /*border: solid 1px black;*/
 }
 
 .inputs {
   display: flex;
   justify-content: center;
   margin: 1em;
+  color: black;
 }
 
 input {
-  height: 30px;
+  /*height: 30px;*/
   width: 25em;
   padding: 17px;
   font-size: 17px;
+  background: transparent;
 }
 
 .login-submit-button {
   width: 100vw;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 7em;
+  margin-bottom: 1em;
   display: flex;
   justify-content: center;
 }
@@ -68,4 +73,12 @@ button:hover {
 
 .cancel-login:hover {
   color: white;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+.security-key {
+  height: 5px;
 }

@@ -178,7 +178,9 @@ there is one thing you cannot fail at, it is being you.<br><br>
 </section>
 
 <section class="new-blog"></section>
-
+  <div><textarea ng-hide="blogPostNew" class="blog-post-input"></textarea></div>
+  <button type="button" class="new-blog-button" ng-click="createPost()">New Post</button>
+  <button type="button" class="publish-button" ng-click="publishPost()" ng-hide="publishBlogPost">Publish</button>
 </section>
 
 </section>

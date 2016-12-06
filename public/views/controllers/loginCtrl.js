@@ -1,10 +1,13 @@
-angular.module('tiara').controller('loginCtrl', function($scope, loginService) {
+angular.module('tiara').controller('loginCtrl', function($scope, loginSvc) {
 
-  $scope.register = function(info) {
-    console.log(info);
-    loginService.register(info).then(function(ctrlData) {
-      console.log(ctrlData);
-    })
-  }
+  $scope.login = function () {
+    loginSvc.login($scope.login).then(function(response){
+      console.log(response);
+      if (!response) {
+        $scope.login.Username = "";
+        $scope.login.Password = "";
+      }
+    });
+  };
 
-})
+});

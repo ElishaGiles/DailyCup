@@ -14,6 +14,7 @@ var db = massive.connectSync({db : "TeaDB"});
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
+app.use(cors());
 app.use(passport.initialize());
 
 //Sending Email
@@ -69,9 +70,33 @@ app.post('/API/register',
   function(req, res) {
     console.log(req.body);
     db.create_user([req.body.username, req.body.password], function(err, response) {
-    })
+      if(err) {
+        res.send(err);
+      }
+      else {
+        res.json(response);
+      }
+    });
   }
-)
+);
+
+//Logging in Users
+app.get('/API/login/:Username/:Password',
+  function(req, res) {
+    console.log(req.body)
+    db.get_users([req.params.Username, req.params.Password], function(err, response) {
+      console.log('hit db request');
+      if(err) {
+        console.log("error!");
+        res.send(err);
+      }
+      else {
+        console.log(response);
+        res.status(200).json(response);
+      }
+    });
+  }
+);
 
 //Other
 app.use(express.static('./public'));

@@ -1,17 +1,21 @@
-angular.module('tiara').service('loginService', function($http) {
+angular.module('tiara').service('loginSvc', function($http, $state) {
 
-  this.register = function(info) {
-    console.log(info);
+  this.login = function(login) {
     return $http ({
-      method: "POST",
-      url: "/API/register",
-      data: info
+      method: 'GET',
+      url: '/API/login/' + login.Username + '/' + login.Password
     }).then(function(response) {
-      console.log('goooo');
-      return response.data;
-    }, function(err) {
-      console.log("you done messed up");
-    });
-  }
+      console.log(response);
+      if (response.data[0]) {
+        $state.go('meet-tiara');
+        return true;
+      } else {
+        alert("You got an empty array!");
+        return false;
+      }
+      // return response.data;
 
-})
+    });
+  };
+
+});

@@ -1,22 +1,24 @@
 <section class="login-wrapper">
+  <div class="body-background">
 
   <div class="register-user" ui-sref="register">Register</div>
 
-  <div class="login-title">WELCOME TIARA</div>
+  <div class="login-title">WELCOME TO TIARA'S HEALTH SITE</div>
 
   <section class="input-wrapper">
     <div class="inputs">
-      <input type="text" name="username" placeholder="username" ng-model="username">
+      <input type="text" name="username" placeholder="Username" ng-model="login.Username">
     </div>
     <div class="inputs">
-      <input type="text" name="password" placeholder="password" ng-model="password">
+      <input type="text" name="password" placeholder="Password" ng-model="login.Password">
     </div>
   </section>
 
   <div class="login-submit-button">
-    <button type="button" ng-click="login()" ui-sref="a-blog">Login</button>
+    <button type="button" ng-click="login()">Login</button>
   </div>
 
   <div class="cancel-login" ui-sref="home">Cancel</div>
+</div>
 
 </section>

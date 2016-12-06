@@ -38,3 +38,14 @@
   width: 5%;
   margin-right: 4px;
 }
+
+/*new blog post information*/
+.new-blog-button {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+.blog-post-input {
+  width: 52vw;
+  height: 25vh;
+}
