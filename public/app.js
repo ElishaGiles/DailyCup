@@ -33,7 +33,7 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     .state('shouldI', {
       url: "/shouldIWorkout",
       templateUrl: "../views/html/shouldI.html",
-      controller: "currentWeatherCtrl"
+      controller: "weatherCtrl"
     })
     .state('login', {
       url: "/login",
@@ -56,7 +56,7 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
     .state('a-blog', {
       url: "/blog/1234",
       templateUrl: "../views/admin/a-blog.html",
-      controller: "blog-ctrl"
+      controller: "aBlogCtrl"
     })
 
 });

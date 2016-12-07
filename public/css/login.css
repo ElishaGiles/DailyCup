@@ -82,3 +82,10 @@ button:hover {
 .security-key {
   height: 5px;
 }
+
+swal({
+  title: "Error!",
+  text: "Here's my error message!",
+  type: "error",
+  confirmButtonText: "Cool"
+});

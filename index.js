@@ -7,7 +7,6 @@ var validator = require('email-validator');
 var passport = require('passport');
 var massive = require('massive');
 
-
 var app = express();
 var LocalStrategy = require('passport-local').Strategy;
 var db = massive.connectSync({db : "TeaDB"});
@@ -35,7 +34,7 @@ app.post('/contact', function(req, res, next) {
     to: 'elisha.g.giles@gmail.com',
     subject: req.body.subject,
     text: req.body.message
-  }
+  };
   smtpTrans.sendMail(mailOpts, function(err, info) {
     if(err) {
       console.log(err);
@@ -45,15 +44,15 @@ app.post('/contact', function(req, res, next) {
       return res.send('success');
     }
   });
-})
+});
 
 //Authentication Process
 passport.use(new LocalStrategy(
   function(username, password, done) {
     db.get_users(username, function(err, user){
-      if(err) {return done(err)};
+      if(err) {return done(err);}
       if(password === password) {}
-    })
+    });
   }
 ));
 
@@ -83,7 +82,8 @@ app.post('/API/register',
 //Logging in Users
 app.get('/API/login/:Username/:Password',
   function(req, res) {
-    console.log(req.body)
+    console.log(req.body);
+
     db.get_users([req.params.Username, req.params.Password], function(err, response) {
       console.log('hit db request');
       if(err) {
@@ -91,10 +91,40 @@ app.get('/API/login/:Username/:Password',
         res.send(err);
       }
       else {
-        console.log(response);
-        res.status(200).json(response);
+        req.user = response;
+        console.log(req.user);
+        res.status(200).json(req.user);
       }
     });
+  }
+);
+
+//Posting Blog post
+app.post('API/blog',
+  function(req, res) {
+    console.log(req.body);
+    var author = req.body.author_id;
+    var postText = req.body.blogPost;
+    var date = req.body.publish_date;
+    var postTitle = req.body.post_title;
+    var likes = req.body.post_likes;
+
+    db.create_post([author, date, postTitle, postText, likes], function(err, response) {
+      if(err) {
+        res.send(err);
+      }
+      else {
+        console.log(response);
+        res.json(response);
+      }
+    });
+  }
+);
+
+app.get('/API/get_user',
+  function(req, res) {
+    console.log("index.js req.user", req.user);
+    res.json(req.user);
   }
 );
 
@@ -103,4 +133,4 @@ app.use(express.static('./public'));
 
 app.listen(8080, function() {
   console.log('listening on port 8080');
-})
+});

@@ -13,7 +13,28 @@
       <li> Current Wind Speed: {{ weatherWindSpeed }}{{ speed }}<li>
     </ul>
 </section>
+<section class="weather-info">
+  <ul>
+    <li> Curent Temperature: {{ day1Temp }} {{ degrees}} </li><br>
+    <li> Current Humidity: {{ day1hum }}{{ percent }}</li><br>
+    <li> Current Wind Speed: {{ day1speed }}{{ speed }}<li>
+    </ul>
+</section>
+<section class="weather-info">
+  <ul>
+      <li> Tomorrow's Temperature: {{ day2Temp }} {{ degrees}} </li><br>
+      <li> Tomorrow's Humidity: {{ day2hum }}{{ percent }}</li><br>
+      <li> Tomorrow's Wind Speed: {{ day2speed }}{{ speed }}<li>
+      </ul>
+</section>
+<section class="weather-info">
+  <ul>
+        <li> Day After Tomorrow's Temperature: {{ day3Temp }} {{ degrees}} </li><br>
+        <li> Day After Tomorrow's  Humidity: {{ day3hum }}{{ percent }}</li><br>
+        <li> Day After Tomorrow's  Wind Speed: {{ day3speed }}{{ speed }}<li>
+  </ul>
+</section>
 
-<button type="button" ng-click="getCurrentWeather(location)">Get Weather</button>
+<button type="button" ng-click="getCurrentWeather(location); getWeekWeather(location)">Get Weather</button>
 
 </section>

@@ -1,7 +1,8 @@
 angular.module('tiara').controller('loginCtrl', function($scope, loginSvc) {
 
-  $scope.login = function () {
-    loginSvc.login($scope.login).then(function(response){
+  $scope.loginUser = function () {
+    console.log("login Ctrl", $scope.login);
+    loginSvc.loginUser($scope.login).then(function(response){
       console.log(response);
       if (!response) {
         $scope.login.Username = "";

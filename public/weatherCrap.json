@@ -1,0 +1,86 @@
+{
+  "city": {
+    "id": 5780026,
+    "name": "Provo",
+    "coord": {
+      "lon": -111.658531,
+      "lat": 40.233841
+    },
+    "country": "US",
+    "population": 0
+  },
+  "cod": "200",
+  "message": 0.3731,
+  "cnt": 3,
+  "list": [{
+    "dt": 1481137200,
+    "temp": {
+      "day": 26.6,
+      "min": -2.58,
+      "max": 26.6,
+      "night": -2.58,
+      "eve": 16.34,
+      "morn": 26.6
+    },
+    "pressure": 842.12,
+    "humidity": 83,
+    "weather": [{
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }],
+    "speed": 3.38,
+    "deg": 17,
+    "clouds": 0
+  },
+
+  {
+    "dt": 1481223600,
+    "temp": {
+      "day": 11.89,
+      "min": -2.19,
+      "max": 18.01,
+      "night": 16.09,
+      "eve": 16.95,
+      "morn": -2.19
+    },
+    "pressure": 844.2,
+    "humidity": 73,
+    "weather": [{
+      "id": 601,
+      "main": "Snow",
+      "description": "snow",
+      "icon": "13d"
+    }],
+    "speed": 3.6,
+    "deg": 128,
+    "clouds": 68,
+    "snow": 2.93
+  },
+
+  {
+    "dt": 1481310000,
+    "temp": {
+      "day": 29.57,
+      "min": 18.16,
+      "max": 35.44,
+      "night": 34.18,
+      "eve": 33.46,
+      "morn": 19.26
+    },
+    "pressure": 840.64,
+    "humidity": 95,
+    "weather": [{
+      "id": 601,
+      "main": "Snow",
+      "description": "snow",
+      "icon": "13d"
+    }],
+    "speed": 3.15,
+    "deg": 120,
+    "clouds": 76,
+    "rain": 1.25,
+    "snow": 1.67
+  }]
+}
