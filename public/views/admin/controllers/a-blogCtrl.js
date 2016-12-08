@@ -8,13 +8,19 @@ angular.module('tiara').controller('aBlogCtrl', function($scope, aBlogSvc) {
     $scope.publishBlogPost = false;
   };
 
-  $scope.publishPost = function(blogPost) {
-    aBlogSvc.publishBlog($scope.id, blogPost).then(function(response){});
+  aBlogSvc.get_blogPosts().then(function(response) {
+    console.log("blogposts", response);
+    $scope.blogPosts = response;
+  });
+
+  $scope.publishPost = function() {
+    aBlogSvc.publishBlog($scope.user.user_id, $scope.blogPost).then(function(response){});
   };
 
 
 aBlogSvc.get_user().then(function(response) {
-
+  $scope.user = response;
+  console.log(response);
 });
 
 

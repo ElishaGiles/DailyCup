@@ -1,6 +1,7 @@
 angular.module('tiara').service('aBlogSvc', function($http) {
 
   this.publishBlog = function(author, text) {
+    console.log('SVC', author, text);
     return $http ({
       method: 'POST',
       url: "/API/blog",
@@ -16,12 +17,23 @@ angular.module('tiara').service('aBlogSvc', function($http) {
     });
   };
 
+  this.get_blogPosts = function() {
+    return $http ({
+      method: 'GET',
+      url: "/API/blogPosts"
+    }).then(function(response) {
+      console.log(response);
+      return response.data;
+    });
+  };
+
   this.get_user = function() {
     return $http ({
       method: 'GET',
-      url: '/API/get_user'
+      url: '/me'
     }).then(function(response) {
-      console.log(response);
+      // console.log(response);
+      return response.data;
     });
   };
 

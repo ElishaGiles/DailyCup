@@ -1,11 +1,14 @@
 var express = require('express');
-var session = require('session');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var nodemailer = require('nodemailer');
 var validator = require('email-validator');
 var passport = require('passport');
 var massive = require('massive');
+var moment = require('moment');
+var FacebookStrategy = require('passport-facebook').Strategy;
+var config = require('./config.js');
 
 var app = express();
 var LocalStrategy = require('passport-local').Strategy;
@@ -14,7 +17,71 @@ var db = massive.connectSync({db : "TeaDB"});
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(session({
+  secret: 'make up your own session secret',
+  resave: true,
+  saveUninitialized: true
+}));
 app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new FacebookStrategy({
+    clientID: config.facebookID,
+    clientSecret: config.facebookSecret,
+    callbackURL: "/auth/facebook/callback"
+  }, function(accessToken, refreshToken, profile, next) {
+    console.log('FB Profile: ', profile);
+    //db. query to check if user exists in database
+    db.users.findOne({facebook_id: profile.id}, function(err, dbRes) {
+      if (!dbRes) {
+        console.log("User not found. Creating...");
+        db.users.insert({user_name: profile.displayName, facebook_id: profile.id} , function(err, dbRes) {
+          return next(null, dbRes);
+        });
+      } else {
+        console.log("Existing user found.");
+        return next(null, dbRes);
+      }
+    });
+  }
+));
+
+passport.serializeUser(function(profile, done) {
+  console.log('ser');
+  done(null, profile);
+});
+
+passport.deserializeUser(function(deserializedUser, done) {
+  console.log('des');
+  done(null, deserializedUser);
+});
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+  successRedirect: '/#/blog/1234',
+  failureRedirect: '/#/login'
+}));
+
+var checkAuth = function (req, res, next) {
+  // console.log("checkAuth");
+  if (req.isAuthenticated()) {
+    next();
+  }
+  else {
+    res.json({err: 403});
+  }
+};
+
+app.get('/me', checkAuth, function(req, res, next) {
+  console.log("req.user in server /me", req.user);
+   res.json(req.user);
+});
+
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
 
 //Sending Email
 app.post('/contact', function(req, res, next) {
@@ -100,31 +167,41 @@ app.get('/API/login/:Username/:Password',
 );
 
 //Posting Blog post
-app.post('API/blog',
+app.post('/API/blog',
   function(req, res) {
-    console.log(req.body);
+    console.log('index', req.body);
     var author = req.body.author_id;
-    var postText = req.body.blogPost;
+    var postText = req.body.blog_post;
     var date = req.body.publish_date;
     var postTitle = req.body.post_title;
     var likes = req.body.post_likes;
 
+    console.log('postText on req.body', postText);
+
     db.create_post([author, date, postTitle, postText, likes], function(err, response) {
+      console.log("database post?");
       if(err) {
+        console.log(err);
         res.send(err);
       }
-      else {
-        console.log(response);
-        res.json(response);
-      }
+      console.log(response);
+      res.json(response);
+
     });
   }
 );
 
-app.get('/API/get_user',
+app.get('/API/blogPosts',
   function(req, res) {
-    console.log("index.js req.user", req.user);
-    res.json(req.user);
+    db.get_posts(function(err, response) {
+      if(err) {
+        res.send(err);
+      }
+      else {
+        console.log("get request", response);
+        res.json(response);
+      }
+    });
   }
 );
 

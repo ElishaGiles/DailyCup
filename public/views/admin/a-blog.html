@@ -1,6 +1,8 @@
 <!-- Using blog.css with Enlighten content -->
 
-<side-menu-directive></side-menu-directive>
+<admin-side-menu-directive></admin-side-menu-directive>
+
+
 
 <section class="blog-content-wrapper-a">
 
@@ -9,6 +11,12 @@
 <section class="block-blog">
 
   <div class="blog-content">
+
+      <div class="" ng-repeat="post in blogPosts">
+          <!-- {{post}} -->
+          {{post.publish_date}}
+          <!-- {{post.blog_post}} -->
+        </div>
 
     <br><br><span style="font-weight: bolder">Lost and Found</span><br><br>
 

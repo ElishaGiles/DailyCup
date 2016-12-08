@@ -8,3 +8,11 @@ create table blog (
   blog_post TEXT,
   post_likes INTEGER
 );
+
+drop table users;
+
+create table users (
+  user_id SERIAL PRIMARY KEY NOT NULL,
+  facebook_id TEXT,
+  user_name TEXT
+);

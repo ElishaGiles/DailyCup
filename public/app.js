@@ -57,6 +57,6 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
       url: "/blog/1234",
       templateUrl: "../views/admin/a-blog.html",
       controller: "aBlogCtrl"
-    })
+    });
 
 });

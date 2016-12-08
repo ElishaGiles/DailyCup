@@ -1,0 +1,72 @@
+.admin-meet {
+  height: 250vh;
+  width: 100vw;
+  display: flex;
+}
+
+.admin-menu2-wrapper {
+  height: 100vh;
+  width: 18vw;
+  background-color: #f24b9b;
+  color: white;
+  position: fixed;
+  display: block;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.logo img {
+  width: 65%;
+  margin-left: 35px;
+  margin-bottom: 35px;
+  /*margin-top: 6em;*/
+  cursor: pointer;
+}
+
+    .admin-menu2 ul, li {
+      margin-left: 1.5em;
+    }
+
+    #one {
+      padding-bottom: 1em;
+      cursor: pointer;
+    }
+
+    #one:hover {
+      color: black;
+    }
+
+.admin-sub-menu2 {
+  padding-top: 1em;
+  padding-left: 1.5em;
+  line-height: 1em;
+}
+
+    .admin-sub-menu ul, li {
+      margin-left: 1.5em;
+    }
+
+    #a-workout, #a-recipe, #a-blog, #a-shouldI {
+      color: #000;
+      padding-bottom: .5em;
+      cursor: pointer;
+    }
+
+    #a-workout:hover, #a-recipe:hover, #a-blog:hover, #a-shouldI:hover {
+      color: white;
+    }
+
+.admin-social-media2 {
+  margin-left: 4em;
+  margin-top: 2em;
+}
+
+    .admin-social-media2 ul li {
+      display: inline-block;
+    }
+
+    #FB, #G, #IG, #YT {
+      margin-left: 0;
+      cursor: pointer;
+    }
