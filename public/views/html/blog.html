@@ -10,11 +10,14 @@
 
   <div class="blog-content">
 
-    <div class="" ng-repeat="post in blogPosts">
-        <!-- {{post}} -->
-        <!-- {{post.publish_date}} -->
-        {{post.author_id}}
-        {{post.blog_post}}
+    <div class="" ng-repeat="post in blog_posts">
+        <br><br><br>
+        <span style="font-weight: bold">{{post.post_title}}</span> <br><br>
+        {{post.publish_date | date: 'longDate'}}<br><br>
+        <div ng-repeat="paragraph in post.blog_post track by $index" class="">
+            <p>{{paragraph}}<br></p>
+        </div><br>
+        {{post.user_name}}<br><br><br>
       </div>
 
     <br><br><span style="font-weight: bolder">Lost and Found</span><br><br>
