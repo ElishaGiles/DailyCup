@@ -1,14 +1,13 @@
 angular.module('tiara').service('aBlogSvc', function($http) {
 
-  this.publishBlog = function(author, text) {
-    console.log('SVC', author, text);
+  this.publishBlog = function(author, title, text) {
     return $http ({
       method: 'POST',
       url: "/API/blog",
       data: {
         author_id: author,
         publish_date: new Date(),
-        post_title: "",
+        post_title: title,
         blog_post: text,
         post_likes: 0
       }

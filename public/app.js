@@ -44,14 +44,10 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
       url: "/recipes",
       templateUrl: "../views/html/recipes.html"
     })
-    .state('register', {
-      url: "/register",
-      templateUrl: "../views/html/register.html",
-      controller: "registerCtrl"
-    })
     .state('blog', {
       url: "/blog",
-      templateUrl: "../views/html/blog.html"
+      templateUrl: "../views/html/blog.html",
+      controller: "aBlogCtrl"
     })
     .state('a-blog', {
       url: "/blog/1234",

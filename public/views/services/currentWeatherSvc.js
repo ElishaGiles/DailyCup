@@ -21,5 +21,5 @@ this.getCurrentWeather = function(zip) {
         });
 
 
-}
-})
+};
+});

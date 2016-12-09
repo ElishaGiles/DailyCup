@@ -1,4 +1,4 @@
-INSERT INTO blog (author_id, publish_date, post_title, blog_post, post_likes) values ($1, $2, $3, $4, $5);
+INSERT INTO blog (author_id, publish_date, post_title, blog_post) values ($1, $2, $3, $4);
 
 -- author_id INTEGER,
 -- publish_date timestamp with time zone,

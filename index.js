@@ -169,16 +169,14 @@ app.get('/API/login/:Username/:Password',
 //Posting Blog post
 app.post('/API/blog',
   function(req, res) {
-    console.log('index', req.body);
     var author = req.body.author_id;
     var postText = req.body.blog_post;
     var date = req.body.publish_date;
     var postTitle = req.body.post_title;
-    var likes = req.body.post_likes;
 
     console.log('postText on req.body', postText);
 
-    db.create_post([author, date, postTitle, postText, likes], function(err, response) {
+    db.create_post([author, date, postTitle, postText], function(err, response) {
       console.log("database post?");
       if(err) {
         console.log(err);

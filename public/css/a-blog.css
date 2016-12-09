@@ -49,3 +49,8 @@
   width: 52vw;
   height: 25vh;
 }
+
+.post-title-input {
+  padding: 3px;
+  margin-bottom: 10px;
+}

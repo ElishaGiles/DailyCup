@@ -1,6 +1,6 @@
 .current-weather {
   margin-left: 18vw;
-  height: 120vh;
+  height: 100vh;
   background-image: url('../images/clouds.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,8 +8,7 @@
 
 .weather-title {
   width: 81vw;
-  height: 20vh;
-  /*border: 1px solid black;*/
+  height: 18vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,10 +33,10 @@
 
 .weather-info {
   /*border: 1px solid black;*/
+  padding-top: 5em;
   height: 20vh;
-  width: 81vw;
-  display: flex;
-  justify-content: center;
+  width: 34vw;
+  display: table-cell;
   align-items: center;
 }
 

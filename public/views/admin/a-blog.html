@@ -2,8 +2,6 @@
 
 <admin-side-menu-directive></admin-side-menu-directive>
 
-
-
 <section class="blog-content-wrapper-a">
 
   <div class="tiara-photo-wrapper-blog"></div>
@@ -12,10 +10,14 @@
 
   <div class="blog-content">
 
-      <div class="" ng-repeat="post in blogPosts">
+      <div class="" ng-repeat="post in blog_posts">
           <!-- {{post}} -->
-          {{post.publish_date}}
-          <!-- {{post.blog_post}} -->
+          {{post.post_title}} <br>
+          {{post.publish_date | date: 'longDate'}}
+          <div ng-repeat="paragraph in post.blog_post track by $index" class="">
+              <p>{{paragraph}}</p>
+          </div>
+          {{post.user_name}}
         </div>
 
     <br><br><span style="font-weight: bolder">Lost and Found</span><br><br>
@@ -186,9 +188,10 @@ there is one thing you cannot fail at, it is being you.<br><br>
 </section>
 
 <section class="new-blog"></section>
-  <div><textarea ng-hide="blogPostNew" class="blog-post-input" ng-model="blogPost"></textarea></div>
+  <div><input type="text" placeholder="Post Title" class="post-title-input" ng-hide="blogPostNew" ng-model="newPost.title"></div>
+  <div><textarea ng-hide="blogPostNew" class="blog-post-input" ng-model="newPost.blogPost"></textarea></div>
   <button type="button" class="new-blog-button" ng-click="createPost()">New Post</button>
-  <button type="button" class="publish-button" ng-click="publishPost()" ng-hide="publishBlogPost">Publish</button>
+  <button type="button" class="publish-button" ng-click="publishPost(newPost); closePost();" ng-hide="publishBlogPost">Publish</button>
 </section>
 
 </section>
