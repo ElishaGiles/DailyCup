@@ -5,8 +5,7 @@ create table blog (
   author_id INTEGER,
   publish_date timestamp with time zone,
   post_title TEXT,
-  blog_post TEXT,
-  post_likes INTEGER
+  blog_post TEXT
 );
 
 drop table users;

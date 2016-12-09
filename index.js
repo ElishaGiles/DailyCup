@@ -12,7 +12,9 @@ var config = require('./config.js');
 
 var app = express();
 var LocalStrategy = require('passport-local').Strategy;
-//var db = massive.connectSync({db : "TeaDB"});
+var massiveInstance = massive.connectSync({connectionString : config.db});
+app.set('db', massiveInstance);
+var db = app.get('db');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
