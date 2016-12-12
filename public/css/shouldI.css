@@ -33,11 +33,14 @@
 
 .weather-info {
   /*border: 1px solid black;*/
-  padding-top: 5em;
-  height: 20vh;
-  width: 34vw;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  /*height: 20vh;*/
+  width: 40vw;
   display: table-cell;
   align-items: center;
+  text-align: center;
+  font-size: 30px;
 }
 
 .weather-button {

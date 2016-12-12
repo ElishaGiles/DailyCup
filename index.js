@@ -10,7 +10,7 @@ var moment = require('moment');
 var FacebookStrategy = require('passport-facebook').Strategy;
 var config = require('./config.js');
 
-var app = express();
+var app = module.exports = express();
 var LocalStrategy = require('passport-local').Strategy;
 var massiveInstance = massive.connectSync({connectionString : config.db});
 app.set('db', massiveInstance);

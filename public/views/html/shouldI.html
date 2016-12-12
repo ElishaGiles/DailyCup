@@ -3,7 +3,7 @@
 <section class="current-weather">
   <div class="weather-title">Should You Workout?</div>
   <div class="location-wrapper">
-    <div>What is your zip code?</div>
+    <div style="font-size: 28px;">What is your zip code?</div>
     <input type="text" class="location" ng-model="location">
   </div>
   <section class="weather-info">
@@ -21,15 +21,9 @@
       <li> Tomorrow's Wind Speed: {{ day2speed }}{{ speed }}<li>
       </ul>
 </section>
-<section class="weather-info">
-  <ul>
-        <li> Day After Tomorrow's Temperature: {{ day3Temp | number: 0 }}{{ degrees}} </li><br>
-        <li> Day After Tomorrow's  Humidity: {{ day3hum }}{{ percent }}</li><br>
-        <li> Day After Tomorrow's  Wind Speed: {{ day3speed }}{{ speed }}<li>
-  </ul>
-</section>
+
 <div class="weather-button">
-<button type="button" ng-click="getCurrentWeather(location); getWeekWeather(location)">Get Weather</button>
+<button type="button" ng-click="getCurrentWeather(location); getWeekWeather(location); alertWorkout(location)">Get Weather</button>
 </div>
 
 </section>
