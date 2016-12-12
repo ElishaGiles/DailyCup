@@ -11,7 +11,6 @@ angular.module('tiara').controller('contact-ctrl', function($scope, contactServi
           title: "Your Message Was Sent",
           type: "success"
         })
-        // alert('Your Message was Sent');
       }
 
     });
