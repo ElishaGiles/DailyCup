@@ -1,6 +1,6 @@
 angular.module('tiara').service('currentWeatherSvc', function($http) {
 
-this.getCurrentWeather = function(zip) {
+this.getCurrentWeather = (zip) => {
   return $http({
   method: 'GET',
   url: 'http://api.openweathermap.org/data/2.5/weather?units=imperial&q=' + zip + '&APPID=b43bd17f3624f267832c89ee3b9d3667'

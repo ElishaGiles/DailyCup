@@ -1,6 +1,6 @@
 angular.module('tiara').service('loginSvc', function($http, $state) {
 
-  this.loginUser = function(login) {
+  this.loginUser = (login) => {
     console.log("svc login object",login);
     return $http ({
       method: 'GET',

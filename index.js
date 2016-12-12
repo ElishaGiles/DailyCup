@@ -1,20 +1,20 @@
-var express = require('express');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var nodemailer = require('nodemailer');
-var validator = require('email-validator');
-var passport = require('passport');
-var massive = require('massive');
-var moment = require('moment');
-var FacebookStrategy = require('passport-facebook').Strategy;
-var config = require('./config.js');
+const express = require('express');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+const validator = require('email-validator');
+const passport = require('passport');
+const massive = require('massive');
+const moment = require('moment');
+const FacebookStrategy = require('passport-facebook').Strategy;
+const config = require('./config.js');
 
-var app = module.exports = express();
-var LocalStrategy = require('passport-local').Strategy;
-var massiveInstance = massive.connectSync({connectionString : config.db});
+const app = module.exports = express();
+const LocalStrategy = require('passport-local').Strategy;
+const massiveInstance = massive.connectSync({connectionString : config.db});
 app.set('db', massiveInstance);
-var db = app.get('db');
+const db = app.get('db');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -31,13 +31,13 @@ passport.use(new FacebookStrategy({
     clientID: config.facebookID,
     clientSecret: config.facebookSecret,
     callbackURL: "/auth/facebook/callback"
-  }, function(accessToken, refreshToken, profile, next) {
+  }, (accessToken, refreshToken, profile, next) => {
     console.log('FB Profile: ', profile);
     //db. query to check if user exists in database
-    db.users.findOne({facebook_id: profile.id}, function(err, dbRes) {
+    db.users.findOne({facebook_id: profile.id}, (err, dbRes) => {
       if (!dbRes) {
         console.log("User not found. Creating...");
-        db.users.insert({user_name: profile.displayName, facebook_id: profile.id} , function(err, dbRes) {
+        db.users.insert({user_name: profile.displayName, facebook_id: profile.id} , (err, dbRes) => {
           return next(null, dbRes);
         });
       } else {
@@ -48,12 +48,12 @@ passport.use(new FacebookStrategy({
   }
 ));
 
-passport.serializeUser(function(profile, done) {
+passport.serializeUser((profile, done) => {
   console.log('ser');
   done(null, profile);
 });
 
-passport.deserializeUser(function(deserializedUser, done) {
+passport.deserializeUser((deserializedUser, done) => {
   console.log('des');
   done(null, deserializedUser);
 });
@@ -65,7 +65,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', {
   failureRedirect: '/#/'
 }));
 
-var checkAuth = function (req, res, next) {
+const checkAuth = (req, res, next) => {
   // console.log("checkAuth");
   if (req.isAuthenticated()) {
     next();
@@ -75,19 +75,19 @@ var checkAuth = function (req, res, next) {
   }
 };
 
-app.get('/me', checkAuth, function(req, res, next) {
+app.get('/me', checkAuth, (req, res, next) => {
   console.log("req.user in server /me", req.user);
    res.json(req.user);
 });
 
-app.get('/logout', function(req, res){
+app.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
 });
 
 //Sending Email
-app.post('/contact', function(req, res, next) {
-  var mailOpts, smtpTrans;
+app.post('/contact', (req, res, next) => {
+  const mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -104,7 +104,7 @@ app.post('/contact', function(req, res, next) {
     subject: req.body.subject,
     text: req.body.message
   };
-  smtpTrans.sendMail(mailOpts, function(err, info) {
+  smtpTrans.sendMail(mailOpts, (err, info) => {
     if(err) {
       console.log(err);
       return res.send('err');
@@ -117,8 +117,8 @@ app.post('/contact', function(req, res, next) {
 
 //Authentication Process
 passport.use(new LocalStrategy(
-  function(username, password, done) {
-    db.get_users(username, function(err, user){
+  (username, password, done) => {
+    db.get_users(username, (err, user) => {
       if(err) {return done(err);}
       if(password === password) {}
     });
@@ -127,7 +127,7 @@ passport.use(new LocalStrategy(
 
 app.post('/login',
   passport.authenticate('local'),
-  function(req, res) {
+  (req, res) => {
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
     res.redirect('/meet-tiara/' + req.user.username);
@@ -135,9 +135,9 @@ app.post('/login',
 
 //Registering Users
 app.post('/API/register',
-  function(req, res) {
+  (req, res) => {
     console.log(req.body);
-    db.create_user([req.body.username, req.body.password], function(err, response) {
+    db.create_user([req.body.username, req.body.password], (err, response) => {
       if(err) {
         res.send(err);
       }
@@ -150,10 +150,10 @@ app.post('/API/register',
 
 //Logging in Users
 app.get('/API/login/:Username/:Password',
-  function(req, res) {
+  (req, res) => {
     console.log(req.body);
 
-    db.get_users([req.params.Username, req.params.Password], function(err, response) {
+    db.get_users([req.params.Username, req.params.Password], (err, response) => {
       console.log('hit db request');
       if(err) {
         console.log("error!");
@@ -170,15 +170,15 @@ app.get('/API/login/:Username/:Password',
 
 //Posting Blog post
 app.post('/API/blog',
-  function(req, res) {
-    var author = req.body.author_id;
-    var postText = req.body.blog_post;
-    var date = req.body.publish_date;
-    var postTitle = req.body.post_title;
+  (req, res) => {
+    const author = req.body.author_id;
+    const postText = req.body.blog_post;
+    const date = req.body.publish_date;
+    const postTitle = req.body.post_title;
 
     console.log('postText on req.body', postText);
 
-    db.create_post([author, date, postTitle, postText], function(err, response) {
+    db.create_post([author, date, postTitle, postText], (err, response) => {
       console.log("database post?");
       if(err) {
         console.log(err);
@@ -192,8 +192,8 @@ app.post('/API/blog',
 );
 
 app.get('/API/blogPosts',
-  function(req, res) {
-    db.get_posts(function(err, response) {
+  (req, res) => {
+    db.get_posts((err, response) => {
       if(err) {
         res.send(err);
       }
@@ -208,6 +208,6 @@ app.get('/API/blogPosts',
 //Other
 app.use(express.static('./public'));
 
-app.listen(8080, function() {
+app.listen(8080, () => {
   console.log('listening on port 8080');
 });

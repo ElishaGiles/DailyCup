@@ -1,6 +1,6 @@
 angular.module('tiara').controller('weatherCtrl', function($scope, currentWeatherSvc, weekWeatherSvc) {
 
-  $scope.getCurrentWeather = function(zip) {currentWeatherSvc.getCurrentWeather(zip).then(function(weatherObject) {
+  $scope.getCurrentWeather = (zip) => {currentWeatherSvc.getCurrentWeather(zip).then(function(weatherObject) {
     $scope.weatherTemp = weatherObject.temp;
     $scope.weatherIcon = weatherObject.icon;
     $scope.weatherDesc = weatherObject.desc;
@@ -13,7 +13,7 @@ angular.module('tiara').controller('weatherCtrl', function($scope, currentWeathe
   });
 };
 
-$scope.getWeekWeather = function(zip) {weekWeatherSvc.getWeekWeather(zip).then(function(weekObject) {
+$scope.getWeekWeather = (zip) => {weekWeatherSvc.getWeekWeather(zip).then(function(weekObject) {
     $scope.day1Temp = weekObject.temp1;
     $scope.day1hum = weekObject.humidity1;
     $scope.day1speed = weekObject.windSpeed1;
@@ -26,15 +26,27 @@ $scope.getWeekWeather = function(zip) {weekWeatherSvc.getWeekWeather(zip).then(f
   });
 };
 
-  $scope.alertWorkout = function(zip) {currentWeatherSvc.getCurrentWeather(zip).then(function(weatherObject) {
+  $scope.alertWorkout = (zip) => {currentWeatherSvc.getCurrentWeather(zip).then(function(weatherObject) {
     if(weatherObject.temp < 40) {
-      alert("Do an at home workout! No need to freeze outside. I recommend Beachbody On Demand!");
+      swal({
+        title: "Do an at home workout. No need to freeze outside.",
+        text: "I recommend Beachbody on Demand!",
+        imageUrl: './images/snowflake.png'
+      });
     }
     else if(weatherObject.temp >= 40 && weatherObject.temp < 80) {
-      alert("Get on outside! It's wonderful weather for working out! How about a hike or a run around town?");
+      swal({
+        title: "Get on outside!",
+        text: "How about a hike or a run?",
+        imageUrl: "./images/thumb-up-sun.jpg"
+      })
     }
     else {
-      alert("Head on to the gym. It's a little warm to be outside! Try conquering those weight machines you are afraid of.");
+      swal({
+        title: "Head on to the gym or stay home.",
+        text: "It's way to hot to be outside.",
+        imageUrl: "./images/too_hot.jpg"
+      })
     }
   });
 

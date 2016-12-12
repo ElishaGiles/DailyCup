@@ -1,6 +1,6 @@
 angular.module('tiara').service('contactService', function($http) {
 
-  this.sendForm = function(form) {
+  this.sendForm = (form) => {
     return $http ({
       method: 'POST',
       url: '/contact',

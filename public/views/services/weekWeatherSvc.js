@@ -1,6 +1,6 @@
 angular.module('tiara').service('weekWeatherSvc', function($http) {
 
-  this.getWeekWeather = function(zip) {
+  this.getWeekWeather = (zip) => {
     return $http({
     method: 'GET',
     url: 'http://api.openweathermap.org/data/2.5/forecast/daily?units=imperial&q=' + zip + '&cnt=3&APPID=b43bd17f3624f267832c89ee3b9d3667'
