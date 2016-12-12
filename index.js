@@ -86,8 +86,8 @@ app.get('/logout', (req, res) => {
 });
 
 //Sending Email
-app.post('/contact', (req, res, next) => {
-  const mailOpts, smtpTrans;
+app.post('/contact', function(req, res, next) {
+  var mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -104,7 +104,7 @@ app.post('/contact', (req, res, next) => {
     subject: req.body.subject,
     text: req.body.message
   };
-  smtpTrans.sendMail(mailOpts, (err, info) => {
+  smtpTrans.sendMail(mailOpts, function(err, info) {
     if(err) {
       console.log(err);
       return res.send('err');

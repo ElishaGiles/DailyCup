@@ -7,7 +7,11 @@ angular.module('tiara').controller('contact-ctrl', function($scope, contactServi
         alert('There was an error');
       }
       else {
-        alert('Your Message was Sent');
+        swal({
+          title: "Your Message Was Sent",
+          type: "success"
+        })
+        // alert('Your Message was Sent');
       }
 
     });
