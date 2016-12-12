@@ -6,6 +6,6 @@ angular.module('tiara').service('contactService', function($http) {
       url: '/contact',
       data: form
     });
-  }
+  };
 
 });
