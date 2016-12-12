@@ -2,7 +2,7 @@ angular.module('tiara').controller('contact-ctrl', function($scope, contactServi
 
   $scope.sendForm = function(form) {
     contactService.sendForm(form).then(function(response, err) {
-      if(response.data === err) {
+      if(response.data === 'err') {
         console.log(('err'));
         alert('There was an error');
       }
