@@ -28,13 +28,13 @@ $scope.getWeekWeather = function(zip) {weekWeatherSvc.getWeekWeather(zip).then(f
 
   $scope.alertWorkout = function(zip) {currentWeatherSvc.getCurrentWeather(zip).then(function(weatherObject) {
     if(weatherObject.temp < 40) {
-      alert("Do an at home workout! No need to freeze outside");
+      alert("Do an at home workout! No need to freeze outside. I recommend Beachbody On Demand!");
     }
     else if(weatherObject.temp >= 40 && weatherObject.temp < 80) {
-      alert("Get on outside! It's wonderful weather for working out!");
+      alert("Get on outside! It's wonderful weather for working out! How about a hike or a run around town?");
     }
     else {
-      alert("Head on to the gym. It's a little warm to be outside!");
+      alert("Head on to the gym. It's a little warm to be outside! Try conquering those weight machines you are afraid of.");
     }
   });
 

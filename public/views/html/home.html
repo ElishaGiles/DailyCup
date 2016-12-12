@@ -16,7 +16,11 @@
       </ul>
     </div>
     <div class="login-button-wrapper">
-      <a href="/auth/facebook">Login via Facebook</a>
+      <a ng-show="validKey" href="/auth/facebook" class="admin-login">Log Me In</a>
+      <input class="key" type="password" placeholder="Authorization Key" ng-model="key" ng-show="keyPlace">
+    </div>
+    <div class="checkUser-wrapper">
+      <button class="check-user" ng-click="checkUser(key)">Show Admin Login</button>
     </div>
   </div>
 </div>

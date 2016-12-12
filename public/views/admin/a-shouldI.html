@@ -1,0 +1,29 @@
+<admin-side-menu-directive></admin-side-menu-directive>
+
+<section class="current-weather">
+  <div class="weather-title">Should You Workout?</div>
+  <div class="location-wrapper">
+    <div style="font-size: 28px;">What is your zip code?</div>
+    <input type="text" class="location" ng-model="location">
+  </div>
+  <section class="weather-info">
+    <ul>
+      <li> Current Temperature: {{ weatherTemp | number: 0 }}{{ degrees}} </li><br>
+      <li> Current Humidity: {{ weatherHum }}{{ percent }}</li><br>
+      <li> Current Wind Speed: {{ weatherWindSpeed }}{{ speed }}<li>
+    </ul>
+</section>
+
+<section class="weather-info">
+  <ul>
+      <li> Tomorrow's Temperature: {{ day2Temp | number: 0 }}{{ degrees}} </li><br>
+      <li> Tomorrow's Humidity: {{ day2hum }}{{ percent }}</li><br>
+      <li> Tomorrow's Wind Speed: {{ day2speed }}{{ speed }}<li>
+      </ul>
+</section>
+
+<div class="weather-button">
+<button type="button" ng-click="getCurrentWeather(location); getWeekWeather(location); alertWorkout(location)">Get Weather</button>
+</div>
+
+</section>

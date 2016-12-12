@@ -100,7 +100,7 @@
 
 .social-media {
   width: 100vw;
-  height: 13vh;
+  height: 7vh;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -124,13 +124,37 @@
 
 .login-button-wrapper {
   display: flex;
-  justify-content: center;
   color: white;
   text-decoration: underline;
   cursor: pointer;
+  margin-top: 1.5em;
 }
 
 #login-button:hover {
   color: black;
   text-decoration: underline;
+}
+
+.key {
+  width: 10em;
+  height: 2em;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 0px;
+  display: flex;
+  text-align: center;
+  border: solid, 1px, black;
+  display: flex;
+}
+
+.checkUser-wrapper {
+  width: 10vw;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-login {
+  padding: 5px;
+  margin-left: 2em;
 }

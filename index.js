@@ -58,11 +58,11 @@ passport.deserializeUser(function(deserializedUser, done) {
   done(null, deserializedUser);
 });
 
-app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook',passport.authenticate('facebook'));
 
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
   successRedirect: '/#/blog/1234',
-  failureRedirect: '/#/login'
+  failureRedirect: '/#/'
 }));
 
 var checkAuth = function (req, res, next) {

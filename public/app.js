@@ -3,7 +3,8 @@ angular.module('tiara', ['ui.router', 'ngAnimate']).config(function($stateProvid
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: "../views/html/home.html"
+      templateUrl: "../views/html/home.html",
+      controller: "homeCtrl"
     })
     .state('meet-tiara', {
       url: '/meet-tiara',
